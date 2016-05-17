@@ -1,0 +1,61 @@
+/* SoftDrop
+======================= */
+.softdrop-select, .softdrop-select *, .softdrop-select *:before, .softdrop-select *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; 
+}
+.softdrop-select {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+  min-width: 200px;
+}
+.softdrop-select .softdrop-selected {
+  position: relative;
+  padding: 6px 15px 6px 10px;
+  cursor: pointer;
+  border:1px solid #ddd;
+}
+.softdrop-select .softdrop-selected:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    border: solid transparent;
+    border-width: 5px 4px 0;
+    border-top-color: #CCCCCC;
+}
+.softdrop-select .softdrop-list {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin:0;
+  padding:0;
+  display: none;
+  list-style: none;
+}
+.softdrop-select.softdrop-active .softdrop-list {
+  display: block;
+}
+.softdrop-list {
+  background-color: white;
+  border: 1px solid #CCCCCC;
+  max-height: 250px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 0.25em 0;
+  width: auto;
+  z-index: 99; 
+}
+.softdrop-list li {
+  padding: 4px 0 4px 10px;
+}
+.softdrop-list li:hover {
+  background-color: #f3f3f3;
+}
+select[data-softdrop] {
+  display: none; 
+}
