@@ -22,9 +22,9 @@ var SoftDrop = (function(){
 
 	// SoftDrop default options
 	var defaults = {
-     	className: '',
-     	mobile: true
-    }
+	 	className: '',
+	 	mobile: true
+	}
 
 	/**
 	* Initializes the SoftDrop object. Returns nothing.
@@ -34,7 +34,7 @@ var SoftDrop = (function(){
 
 		// Extend Default Options
 		if (arguments[0] && typeof arguments[0] === "object") {
-	      	options = _extendDefaults(defaults, arguments[0]);
+			options = _extendDefaults(defaults, arguments[0]);
 	    }
 
 	    // Click anywhere to close
@@ -42,7 +42,7 @@ var SoftDrop = (function(){
 
 	    // Build elements
 	   	_loop();
-    }
+	}
     
     var _loop = function() {
     	var selects = document.getElementsByClassName(options.selector);
@@ -57,30 +57,30 @@ var SoftDrop = (function(){
 					ul = document.createElement('ul');
 
 					select.setAttribute("data-softdrop",i);
-			        mainNode.className = "softdrop-select";
-			        selected.className = "softdrop-selected";
-			        ul.className = "softdrop-list";
+					mainNode.className = "softdrop-select";
+					selected.className = "softdrop-selected";
+					ul.className = "softdrop-list";
 
-			        mainNode.appendChild(selected);
-			        mainNode.appendChild(ul);
-			        select.parentNode.insertBefore(mainNode,null);
+					mainNode.appendChild(selected);
+					mainNode.appendChild(ul);
+					select.parentNode.insertBefore(mainNode,null);
 
-		        for (var i = 0; i < select.length; i++) {
-		        	var node = document.createElement("li"),
+				for (var i = 0; i < select.length; i++) {
+					var node = document.createElement("li"),
 						textnode = document.createTextNode(select[i].value);
 						
 						node.appendChild(textnode);
 						node.setAttribute("data-value",select[i].value);
 						node.addEventListener("click",_clickEvent);
-			        	docFrag.appendChild(node);
+						docFrag.appendChild(node);
 
-		        	if(i == 0) {
-		        		selected.appendChild(document.createTextNode(select[i].value));
-		        	}
-		        };
+					if(i == 0) {
+						selected.appendChild(document.createTextNode(select[i].value));
+					}
+				};
 
-		        ul.appendChild(docFrag);
-		        selected.addEventListener("click",_toggleElements);
+				ul.appendChild(docFrag);
+				selected.addEventListener("click",_toggleElements);
 			});
 		}
     }
@@ -127,7 +127,7 @@ var SoftDrop = (function(){
 
 	    addClass: function( elem, classname ) {
 	      if( elem && !_.hasClass( elem, classname ) ) {
-	        elem.className += " " + classname;
+			elem.className += " " + classname;
 	      }
 	    },
 
@@ -147,7 +147,7 @@ var SoftDrop = (function(){
 	    var property;
 	    for (property in properties) {
 	      if (properties.hasOwnProperty(property)) {
-	        source[property] = properties[property];
+			source[property] = properties[property];
 	      }
 	    }
 	    return source;
@@ -159,4 +159,3 @@ var SoftDrop = (function(){
 	}
 
 })();
-
