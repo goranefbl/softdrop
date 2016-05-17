@@ -21,9 +21,9 @@ As simple as it gets:
 
 ```javascript
 SoftDrop.init({
-      selector:'your-select-class', // select class
-      mobile:true  // to show on mobile
-    });
+ 	selector:'your-select-class', // select class
+ 	mobile:true  // to show on mobile
+});
 ```
 
 ## Browser Support
