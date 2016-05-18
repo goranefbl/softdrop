@@ -36,8 +36,5 @@ This component has been tested in the following browsers:
 
 If anyone wants to run any tests on older browser versions, please do so and reach out to me!
 
-# License
-
-The MIT License (MIT)
-
-Copyright (c) 2016 Goran Jakovljevic
+## License
+Copyright &copy; 2016 Goran Jakovljevic - UNDER [MIT License](LICENSE)
