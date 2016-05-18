@@ -1,5 +1,5 @@
 # SoftDrop
-Simple and light (2kb) JS plugin to customize &lt;select> elements. Thats about it!
+Simple and light (2kb) JS plugin to customize &lt;select> elements. Thats about it.
 
 ## Live Demo
 
